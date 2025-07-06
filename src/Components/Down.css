@@ -1,0 +1,83 @@
+/* Container for the main content */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  gap: 60%; /* Space between buttons */
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Container for buttons */
+
+.buttonContainer {
+  .authorButton{
+    /* margin-right: 90px; */
+    background-color: #f99a52;; /* Red background */
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  }
+}
+
+.authorButton1 {
+  background-color: #f99a52;; /* Red background */
+  color: rgb(16, 16, 16);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+
+/* .authorButton1 a{
+  /* margin-left; */
+/* }  */
+
+.authorButton a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  /* margin-left: 20px; */
+}
+
+.authorButton:hover, .authorButton1:hover {
+  background-color: #ff3333; /* Darker red on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* On small devices, switch to column layout */
+  .container {
+    flex-direction: column; /* Make column layout on smaller screens */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+
+
+  /* .buttonContainer, .buttonContainer1 {
+    width: 100%;
+    justify-content: center; /* Center the buttons */
+  } 
+
+
+/* For larger screens, keep row layout */
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row; /* Keep row layout on larger screens */
+  }
+}

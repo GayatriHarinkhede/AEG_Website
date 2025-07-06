@@ -1,0 +1,40 @@
+.scrolling-Notice-Container{
+    width: 100%; /* Adjust as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  /* Optional: background color */
+    padding: 10px; /* Optional: padding */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(239, 237, 234);
+  }
+
+  .scrolling-notice {
+   
+    display:flex;
+    flex-direction: row;
+    padding-left: 100%; /* Start from outside the container */
+    animation: scroll1 18s linear infinite;
+    div{
+      color: brown;
+      font-size: 20px;
+      font-weight: 500;
+     letter-spacing: 10px;
+    }
+    a{
+      color: rgb(226, 58, 46);
+      font-size: 19px;
+    }
+    
+  }
+
+  @keyframes scroll1 {
+    0% {
+      transform: translateX(0%); /* Start from outside the container on the right */
+    }
+    100% {
+      transform: translateX(-70%); /* End outside the container on the left */
+    }
+  }
