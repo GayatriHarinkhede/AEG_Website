@@ -1,0 +1,310 @@
+/* General Styles */
+.conference-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    max-width: 100%;
+}
+.vidhya{
+    font-weight: 600;
+}
+.organize{
+    font-weight:600;
+}
+/* Hero Section */
+.conference-hero {
+    background-image: url('./image/Logo/Slide/banner4_crowd.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text and Button in Hero Section */
+.conference-hero h1, 
+.conference-hero p, 
+.conference-hero .register-button1 {
+    position: relative;
+    z-index: 10; /* Above the dark overlay */
+}
+
+.conference-hero h1 {
+    font-size: 2.5rem;
+    /* text-shadow: 2px 2px 4px rgba(11, 1, 1, 0.7); */
+}
+
+.conference-hero p {
+    font-size: 1.2rem;
+    color:white;
+}
+
+.conference-hero .register-button1 {
+    height: 45px;
+    width: 220px;
+    background: linear-gradient(to right, #eaaa7f, #c1cb4d); /* Light gradient from yellow to light yellow */
+    color: #2d3436; /* Dark text color for contrast */
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700; /* Adjusted font size */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition for background and transform */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.conference-hero .register-button1:hover {
+    background: linear-gradient(to right, #f97924, #f6e58d); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.conference-hero .register-button1:active {
+    transform: translateY(0); /* Reset lift effect on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+}
+.conference-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 5, 0.5); /* Dark overlay */
+    z-index: 5;
+}
+
+/* Button Hover
+.register-button1:hover {
+    background-color: #c76e2a;
+} */
+
+/* Image Row */
+.images-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-container {
+    flex: 1 1 150px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto; /* Adjust height based on content */
+}
+
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.imgn {
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-top: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Conference Details */
+.conference-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+}
+
+.details-column, 
+.details-column1 {
+    flex: 1 1 100%; /* Full width by default */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.details-column1 p{
+    text-align: center;
+}
+.details-column p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.details-column h2, 
+.details-column1 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Registration Section */
+.conference-registration {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ad9bbf, #c5cad2);
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.conference-registration h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registration-form input {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.registration-form button {
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #ff6a5b;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .conference-hero h1 {
+        font-size: 2.2rem;
+    }
+    .conference-hero p {
+        font-size: 1rem;
+    }
+
+    .details-column, .details-column1 {
+        flex: 1 1 45%; /* Two columns */
+    }
+
+    .thumbnail {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .conference-details {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center align */
+    }
+  
+
+    .details-column, .details-column1 {
+        flex: 1 1 100%; /* Full width */
+    }
+
+    .conference-hero h1 {
+        font-size: 2rem;
+    }
+
+    .thumbnail {
+        width: 130px;
+        height: 130px;
+    }
+    .image-container{
+        .imgn {
+            font-weight: 600;
+            text-align:center;
+            color: #333;
+            margin-top: 5px;
+            font-size: 15px;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .conference-hero {
+        height: 68vh;
+    }
+
+    .conference-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .conference-hero p {
+        font-size: 1rem;
+    }
+
+    .details-column, .details-column1 {
+        padding: 15px;
+    }
+
+    .thumbnail {
+        width: 130px;
+        height: 130px;
+    }
+
+    .conference-registration {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .conference-hero {
+        padding: 20px 10px;
+        height: 70vh; /* Adjust for small screens */
+    }
+    
+    .conference-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .conference-hero p {
+        font-size: 0.9rem;
+    }
+
+    .details-column, .details-column1 {
+        padding: 10px;
+    }
+
+    .thumbnail {
+        width: 120px;
+        height: 120px;
+    }
+
+    .conference-registration {
+        padding: 20px 10px;
+    }
+
+    .conference-registration h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .register-button1 {
+        margin-top: 10px; /* Adjust spacing for buttons on small devices */
+    }
+}

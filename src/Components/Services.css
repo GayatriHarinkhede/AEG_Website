@@ -1,0 +1,133 @@
+.services-container {
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+  max-width: 1200px; /* Set a max width for better alignment */
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f7f9fc;
+  margin-bottom: 40px;
+  background-image: url('./image/services3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 18px;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.service-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover; /* Ensures the image fits well */
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+  }
+
+  .service-image {
+    height: 35vh; /* Adjust image height */
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .hero {
+    padding: 30px 15px; /* Adjust padding on smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+
+  .hero p {
+    font-size: 0.875rem;
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+
+  .service-card {
+    padding: 20px 15px; /* Adjust padding */
+  }
+
+  .service-image {
+    height: 30vh; /* Further reduce image height */
+  }
+}

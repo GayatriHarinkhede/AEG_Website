@@ -1,0 +1,41 @@
+.about-section {
+    /* padding: 20px; */
+    text-align: center;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the counters vertically */
+    /* gap: 40px; */
+     /* Allows wrapping for smaller screens */
+  }
+  
+  
+  .stat-item {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    /* min-width: 100px; Optional: sets a minimum width for each item */
+    padding: 20px;
+  }
+  
+  .stat-item .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .text1{
+    position: relative;
+    z-index: 2;
+  }
+  .stat-item p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: column;
+    }
+  }
+  

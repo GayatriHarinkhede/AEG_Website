@@ -1,0 +1,252 @@
+/* Main Container */
+.conference-tracks {
+  background-color: #d1d9df;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.conference-tracks h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #181b17;
+  margin-bottom: 20px;
+}
+
+/* List Container */
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tracks-list ul {
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Paper Writing Section */
+.Paper-writing, .paper {
+  width: 100%;
+  margin: 10px 0;
+  text-align: justify; /* Ensures proper text justification */
+  font-size: 1rem;
+  padding: 0 20px; /* Adds padding to give space on smaller screens */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.Further, .Further1 {
+  color: rgb(30, 33, 101);
+  font-weight: 800;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+/* Track Item (Icon and Text) */
+.track-item {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.icon {
+  margin-right: 5px; /* Reducing space between icon and text */
+  font-size: 1.2rem;
+  color: #122d49;
+}
+
+/* Call for Papers and Venue Sections */
+.track-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center; /* Aligns the heading to the left */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+/* Venue Image */
+.venue-image {
+  height: auto;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+.venue-name {
+  font-weight: 700;
+  color: #333;
+  margin: 10px 0;
+}
+
+.address {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: justify; /* Ensures proper text justification */
+}
+/* Container for the main content */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  gap: 60%; /* Space between buttons */
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Container for buttons */
+/* Ensure the container holding the buttons is using flexbox for center alignment */
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Centers the button vertically */
+  width: 100%; /* Full width to ensure it occupies the container space */
+  margin: 20px 0; /* Optional: Adds margin above and below for spacing */
+}
+
+/* Additional responsiveness adjustments for smaller screens */
+@media (max-width: 768px) {
+  .buttonContainer {
+    flex-direction: column; /* Stacks the buttons vertically on small screens */
+    gap: 10px; /* Adds space between stacked buttons */
+  }
+}
+
+.buttonContainer {
+  .authorButton{
+    /* margin-right: 90px; */
+    background-color: #f99a52;; /* Red background */
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  }
+}
+
+.authorButton1 {
+  background-color: #f99a52;; /* Red background */
+  color: rgb(16, 16, 16);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+
+/* .authorButton1 a{
+  /* margin-left; */
+/* }  */
+
+.authorButton a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  /* margin-left: 20px; */
+}
+
+.authorButton:hover, .authorButton1:hover {
+  background-color: #ff3333; /* Darker red on hover */
+}
+
+/* Responsive design */
+
+  @media (max-width: 768px) {
+    .buttonContainer {
+      flex-direction: column; /* Stacks the buttons vertically on small screens */
+      gap: 10px; /* Adds space between stacked buttons */
+    }
+    .authorButton1{
+      padding: 8px 16px;
+    }
+  }
+
+
+  /* .buttonContainer, .buttonContainer1 {
+    width: 100%;
+    justify-content: center; /* Center the buttons */
+  /* For larger screens, keep row layout */
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row;
+    justify-content: center; /* Keep row layout on larger screens */
+  }
+}
+
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  .tracks-list {
+      flex-direction: row; /* Row layout on larger screens */
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  .tracks-list ul {
+      width: 30%; /* Limit width for better spacing */
+  }
+
+  .Paper-writing, .paper {
+      width: 100%; /* Full width on larger screens */
+  }
+  .All{
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .conference-tracks h2 {
+      font-size: 1.5rem; /* Smaller font size */
+  }
+  .All{
+    text-align: center;
+  }
+  .track-head {
+    font-size: 18px;
+    text-align: center; /* Aligns the heading to the center on smaller screens */
+}
+
+  .track-item {
+      font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .address, .Paper-writing, .paper {
+      text-align:justify; /* Justify text for better alignment */
+      width: 95%; /* Ensure full width usage on mobile */
+      padding: 0 10px; /* Add padding for better readability */
+  }
+
+  .venue-name, .Further, .Further1 {
+      text-align: center;
+  }
+
+  .tracks-list ul {
+      margin: 0 auto 20px;
+      padding: 0 10px;
+  }
+}

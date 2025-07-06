@@ -1,0 +1,223 @@
+/* Container for the slider */
+.achievements-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Wrapper to hold all slides */
+.achievements-slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slide styling */
+.achievement-slide-item {
+  position: relative;
+  min-width: 100%;
+  height: 50vh;
+  opacity: 1;
+}
+
+/* Dark overlay on slides */
+.achievement-slide-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 243, 243, 0.5); /* Dark overlay */
+  z-index: 1; /* Ensure it's above the image but below the text */
+}
+
+/* Text styling */
+.achievement-slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the text is above the dark overlay */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading styling */
+.achievement-slide-heading {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Paragraph styling */
+.achievement-slide-subheading {
+  font-size: 20px;
+  font-weight: 400;
+  width: 80vw;
+  color: rgb(0, 0, 0);
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/* Button styling */
+.contact {
+  margin-top: 26px;
+  padding: 10px 20px;
+  background-color: #f99a52;
+  color: black;
+  border-radius: 30px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  width: auto;
+}
+
+/* Remove underline from link */
+.contact a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Navigation buttons */
+.achievement-slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.achievement-slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Responsive Design */
+
+/* Responsive Design */
+
+/* For tablets and smaller laptops */
+/* Responsive Design */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .achievement-slide-item {
+    height: 65vh; /* Increased height for better visibility */
+  }
+
+  .achievement-slide-heading {
+    font-size: 2.5rem; /* Use rem for scalability */
+  }
+
+  .achievement-slide-subheading {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+  }
+
+  .contact {
+    width: 150px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+  }
+}
+@media (max-width: 640px) {
+  .achievement-slide-item {
+    height: 65vh; /* Set to a comfortable height */
+  }
+
+  .achievement-slide-heading {
+    font-size: 25px; /* Smaller heading for mobile */
+  }
+
+  .achievement-slide-subheading {
+    text-align: justify;
+    font-size: 1.2rem; /* Smaller subheading */
+    padding: 0 5px; /* Reduce padding */
+    width: 85vw; /* Adjust width for better fit */
+  }
+}
+
+/* For mobile devices */
+/* Responsive Design */
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .achievement-slide-item {
+    height: 70vh; /* Comfortable height */
+    display: flex; /* Ensure flex layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  .achievement-slide-heading {
+    font-size: 25px; /* Responsive size based on viewport width */
+    max-width: 90%;
+     /* Prevent overflow */
+    text-align: center; /* Center the heading */
+    margin: 0 10px; /* Add some margin to avoid edge touching */
+  }
+
+  .achievement-slide-subheading {
+    font-size: 15px; /* Responsive size */
+    padding: 0 10px; /* Padding for subheading */
+    max-width: 90%; /* Prevent overflow */
+    text-align: center; /* Center the subheading */
+  }
+
+  .contact {
+    width: 120px; /* Adjust button width */
+    height: 35px; /* Adjust button height */
+    font-size: 0.9rem; /* Adjust font size */
+    padding: 6px 12px; /* Adjust padding */
+  }
+
+  .achievement-slider-button {
+    font-size: 1.2rem; /* Reduce button size for mobile */
+    padding: 8px; /* Adjust padding */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .achievement-slide-item {
+    height: 60vh; /* Height adjustment for very small screens */
+  }
+
+  .achievement-slide-heading {
+    font-size: 5vw; /* Further reduce heading size */
+  }
+
+  .achievement-slide-subheading {
+    font-size: 3.5vw; /* Further reduce subheading size */
+  }
+
+  .contact {
+    width: 100px; /* Smaller button width */
+    height: 30px; /* Smaller button height */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+
+  .achievement-slider-button {
+    font-size: 0.8rem; /* Further reduce button size */
+    padding: 6px; /* Adjust padding */
+  }
+}
