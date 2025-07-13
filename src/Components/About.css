@@ -1,0 +1,187 @@
+/* Container setup */
+.container {
+  height: auto;
+  width: 100vw;
+  position: relative;
+}
+
+.about-page {
+  position: relative;
+  width: 100%;
+  background-image: url('./image/Logo/Slide/About.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: auto;
+  min-height: 100vh;
+}
+
+.about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(10, 10, 10, 0.6);
+  z-index: 1;
+}
+
+.Head {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Row content with better flex adjustment */
+.row-content {
+  display: flex;
+  gap: 4%;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px; /* Constrain the width for larger screens */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.left-section p {
+  text-align: justify;
+  font-size: 20px;
+}
+
+.about-btn-c {
+  background-color: #f99a52;
+  color: rgb(17, 17, 17);
+  height: 50px;
+  width: 128px;
+  border-radius: 20px;
+  margin-top: 13px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+.right-section img {
+  height: 77%;
+  width: 80%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+
+/* For medium devices (landscape tablets and small desktops) */
+@media (max-width: 1024px) {
+  .about-page {
+    height: auto;
+    padding: 10px;
+  }
+
+  .Head {
+    font-size: 2.5rem;
+  }
+
+  .row-content {
+    flex-direction: column;
+    gap: 3%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section p {
+    font-size: 18px;
+  }
+
+  .right-section img {
+    width: 60%; /* Slightly larger image for tablets */
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/* For small devices (portrait tablets and large phones) */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 10px;
+  }
+
+  .row-content {
+    flex-direction: column;
+    gap: 2%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .about-btn-c {
+    margin-top: 20px;
+    font-size: 14px;
+    width: 120px;
+    height: 45px;
+  }
+
+  .right-section img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* For very small devices (mobile phones) */
+@media (max-width: 480px) {
+  .about-page {
+    padding: 10px;
+  }
+
+  .Head {
+    font-size: 2rem;
+  }
+
+  .row-content {
+    flex-direction: column;
+    gap: 2%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section p {
+    font-size: 14px;
+    padding: 0 10px; /* Reduce padding for small screens */
+  }
+
+  .about-btn-c {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .right-section img {
+    width: 100%;
+    height: auto;
+  }
+}

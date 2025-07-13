@@ -1,0 +1,128 @@
+/* General container for the Patrons section */
+.patrons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  overflow: hidden; /* Hide overflow for the main container */
+}
+
+/* Title for the Patrons section */
+.patrons-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Scrollable container for the logos */
+.patrons-scroll-wrapper {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  touch-action: pan-x; /* Enable horizontal touch scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  width: 100%; /* Ensures the wrapper is full-width */
+  max-width: 100%; /* Prevents overflow */
+}
+
+/* Each patron item, including logo and name */
+.patrons-item {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+  min-width: 260px; /* Ensure items maintain minimum width */
+  flex-shrink: 0; /* Prevent shrinking of the item */
+}
+
+/* Styling for the logos */
+.patrons-logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for logo */
+.patrons-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Name styling below each logo */
+.patrons-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .patrons-item {
+    width: 120px;
+  }
+
+  .patrons-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .patrons-title {
+    font-size: 26px;
+  }
+
+  .patrons-name {
+    font-size: 14px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  .patrons-item {
+    width: 100px;
+  }
+
+  .patrons-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .patrons-title {
+    font-size: 22px;
+  }
+
+  .patrons-name {
+    font-size: 12px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .patrons-item {
+    width: 80px;
+  }
+
+  .patrons-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .patrons-title {
+    font-size: 18px;
+  }
+
+  .patrons-name {
+    font-size: 10px;
+  }
+}

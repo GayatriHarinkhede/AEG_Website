@@ -1,0 +1,96 @@
+/* Full-width page container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #dbf1fd; /* White background */
+    min-height: 45vh;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    width: 100%;
+    max-width: 1200px; /* Max width for large screens */
+    gap: 20px; /* Reduced gap between left and right sections */
+}
+
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced space between sections inside each column */
+}
+
+.section {
+    padding: 0;
+    margin: 0;
+}
+
+.section h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color:black;
+    display: inline-block; /* Ensures the border is only as wide as the content */
+    border-bottom: 2px solid #0a0a0a; /* Bottom border for heading styling */
+    padding-bottom: 2px; /* Reduced padding for bottom border */
+    margin-bottom: 5px; /* Reduced margin below the heading */
+    text-transform: uppercase;
+}
+
+.section p, .section ul li {
+    font-size: 17px; /* Maintain consistent font size */
+    color:black;
+    line-height: 1.2; /* Adjusted line height for tighter spacing */
+    padding-left: 15px;
+    list-style: none;
+    margin-bottom: 5px; /* Reduced margin between list items */
+    position: relative;
+}
+
+.section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+}
+
+@media (max-width: 1200px) {
+    .page {
+        width: 95vw; /* Adjusts width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        width: 100%;
+        gap: 15px; /* Reduced the gap on smaller screens */
+    }
+
+    .section {
+        padding: 0;
+        font-size:x-small;
+       ul li{
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .section h1 {
+        font-size: 1.1em; /* Slightly smaller font size for headings on mobile */
+    }
+
+    .section p, .section ul li {
+        font-size: 1em; /* Slightly smaller text on mobile */
+        padding-left: 10px;
+        font-size:x-small;
+        ul li{
+            font-size: 15px;
+        } /* Reduce padding on mobile */
+    }
+}

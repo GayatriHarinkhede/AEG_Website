@@ -1,0 +1,106 @@
+.scroll-container {
+  display: flex;
+  overflow-x: auto;  /* Allow horizontal scrolling */
+  scroll-behavior: smooth;  /* Enable smooth scrolling */
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;  /* Enable scroll snapping on X-axis */
+}
+
+/* Track Card Styles */
+.track-card {
+  flex: 0 0 auto;  /* Prevent cards from growing or shrinking */
+  min-width: 320px;  /* Minimum width for each card */
+  margin: 0 15px;  /* Space between cards */
+  padding: 20px;
+  background-color: #ffffff;  /* Card background */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Card shadow */
+  scroll-snap-align: start;  /* Snap each card to the start when scrolling */
+  transition: transform 0.2s;  /* Smooth transition for hover effect */
+}
+
+.track-card:hover {
+  transform: scale(1.02);  /* Slightly enlarge card on hover */
+}
+
+/* Header Styles */
+.conference-header {
+  background-color:white;
+  padding: 20px;
+  text-align: center;
+}
+
+.conference-header h1 {
+  font-size: 2.5rem;  /* Increased font size for the title */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.conference-header p {
+  font-size: 1.2rem;  /* Font size for the subtitle */
+  margin-bottom: 20px;
+}
+
+/* Track Title Styles */
+.track-card h2 {
+  font-size: 1.6rem;  /* Font size for track titles */
+  margin-bottom: 15px;  /* Space between title and list */
+}
+
+/* List Styles */
+.track-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.track-card ul li {
+  margin: 8px 0;  /* Space between list items */
+  font-size: 1.1rem;  /* Font size for list items */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .scroll-container {
+    padding: 0 10px;
+    .track-card h2{
+      font-size: 18px;
+    }  /* Adjust padding for smaller screens */
+  }
+
+  .track-card {
+    min-width: 250px;  /* Adjust min-width for smaller screens */
+  }
+
+  .conference-header h1 {
+    font-size: 2rem;  /* Smaller header size on mobile */
+  }
+ 
+}
+
+@media (max-width: 576px) {
+  .conference-header h1 {
+    font-size: 1.5rem;  /* Further reduce header size */
+  }
+  .track-card h2{
+    font-size: 18px;
+  } 
+
+  .conference-header p {
+    font-size: 1rem;  /* Smaller subtitle size */
+  }
+
+  .track-card {
+    min-width: 200px;  /* Adjust min-width for very small screens */
+    padding: 15px;  /* Adjust padding for smaller screens */
+  }
+
+  .track-card h2 {
+    font-size: 1.4rem;  /* Smaller title size */
+  }
+
+  .track-card ul li {
+    font-size: 1rem;  /* Smaller list item size */
+  }
+}

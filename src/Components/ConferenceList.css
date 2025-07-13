@@ -1,0 +1,172 @@
+/* Base Styles */
+.conference-section {
+  max-width: 950px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  height: auto;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a cleaner look */
+  border-radius: 8px; /* Round corners for better visual appeal */
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f3f6da;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  flex-wrap: wrap; /* Allows buttons to stack on small screens */
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add spacing between buttons on mobile */
+}
+
+.tabs button.active {
+  background-color: #f99a52;
+  color: white;
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.find-conference-btn-container {
+  margin-top: 20px;
+}
+
+.find-conference-btn {
+  background-color: #f99a52;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+.contact-content h2{
+  background-color: #f99a52;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 180px;
+}
+.find-conference-btn:hover {
+  background-color: #a9d3e9;
+  color: black;
+}
+
+/* Responsive Design */
+
+/* For Large Devices (Desktops, 1200px and above) */
+@media (min-width: 1200px) {
+  .conference-section {
+    max-width: 1100px; /* Adjust width for larger screens */
+  }
+
+  h2 {
+    font-size: 28px; /* Larger font size for titles */
+  }
+}
+
+/* For Tablets (768px and above) */
+@media (max-width: 1024px) {
+  .conference-section {
+    padding: 1.5rem;
+  }
+
+  .tabs {
+    padding: 5px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .find-conference-btn {
+    padding: 8px 15px;
+  }
+}
+
+/* For Mobile Phones (below 768px) */
+@media (max-width: 768px) {
+  .conference-section {
+    padding: 1rem;
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically */
+  }
+
+  .tabs button {
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 100%; /* Full-width buttons on small screens */
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .find-conference-btn {
+    padding: 8px 12px;
+  }
+}
+
+/* For Small Mobile Phones (below 480px) */
+@media (max-width: 480px) {
+  .conference-section {
+    padding: 0.5rem;
+  }
+
+  .tabs button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .find-conference-btn {
+    padding: 6px 10px;
+  }
+}
