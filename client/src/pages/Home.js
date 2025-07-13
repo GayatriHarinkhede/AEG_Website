@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../pages/Home.css';
+import './Home.css';
 import Slider from '../Components/Slider';
 import ContactForm from '../Components/Contact';
 import Hero from '../Components/Hero';

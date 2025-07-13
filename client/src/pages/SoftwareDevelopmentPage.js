@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../pages/Softwarepages/Navbar';
-import HeroSection from '../pages/Softwarepages/HeroSection';
-import ServicesSection from '../pages/Softwarepages/ServicesSection';
-import TechnologiesSection from '../pages/Softwarepages/TechnologiesSection';
-import AboutSection from '../pages/Softwarepages/AboutSection';
-import TestimonialsSection from '../pages/Softwarepages/TestimonialsSection';
-import WhatsAppButton from '../pages/Softwarepages/WhatsAppButton';
-import NewFooter from '../pages/NewFooter';
+import Navbar from './Softwarepages/Navbar';
+import HeroSection from './Softwarepages/HeroSection';
+import ServicesSection from './Softwarepages/ServicesSection';
+import TechnologiesSection from './Softwarepages/TechnologiesSection';
+import AboutSection from './Softwarepages/AboutSection';
+import TestimonialsSection from './Softwarepages/TestimonialsSection';
+import WhatsAppButton from './Softwarepages/WhatsAppButton';
+import NewFooter from './NewFooter';
 
 // CSS styles
 const styles = `

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pages/Conference.css'; // Custom styles
+import './Conference.css'; // Custom styles
 import ConferenceList from '../Components/ConferenceList';
 import Workshop from '../Components/Workshop';
 import {Link}  from 'react-router-dom'

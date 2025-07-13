@@ -4,7 +4,7 @@ import '../Components/Contact.css';
 import { FaUser, FaEnvelope, FaComment } from 'react-icons/fa'; 
 import Hero from '../Components/Hero';
 // import Footer from '';
-import NewHome from '../pages/Home';
+import NewHome from './Home';
 
 const NewContactForm = () => {
   const [formData, setFormData] = useState({
